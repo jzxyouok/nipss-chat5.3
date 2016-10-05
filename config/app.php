@@ -181,6 +181,7 @@ return [
         // native service providers
         App\Providers\GroupServiceProvider::class,
         App\Providers\ParticipantServiceProvider::class,
+        App\Providers\MessageServiceProvider::class,
 
     ],
 
