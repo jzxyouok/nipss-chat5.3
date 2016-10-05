@@ -23,7 +23,9 @@ Route::group(['middleware' => 'web'], function() {
 
 	Route::group(['prefix' => 'chat_room'], function() {
 	    Route::get('/', 'GroupController@index')->name('get_rooms');
-	    Route::get('/try', 'GroupController@fuckyou')->name('try');
+	    // Route::get('/try', 'GroupController@fuckyou')->name('try');
+	    
+	    Route::post('/sendMessage', 'MessageController@postMessage')->name('massenger');
 
 	    
 	    
