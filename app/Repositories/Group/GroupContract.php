@@ -6,4 +6,5 @@ interface GroupContract
 {
     public function findAll();
     public function findById($groupid);
+    
 }
