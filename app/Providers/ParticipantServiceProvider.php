@@ -24,6 +24,6 @@ class ParticipantServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('App\Repositories\Participant\ParticipantContract',
-            'App\Repositories\Participant\EloquentParticipantRepository');
+                        'App\Repositories\Participant\EloquentParticipantRepository');
     }
 }

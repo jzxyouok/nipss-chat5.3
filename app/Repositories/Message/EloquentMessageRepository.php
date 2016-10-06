@@ -30,4 +30,8 @@ class EloquentMessageRepository implements MessageContract
         return Message::all();
     }
     
+    public function searchByGroupId($groupid) {
+        $messages = Message::where('group_id', $groupid)->get();
+        return $messages;
+    }
 }

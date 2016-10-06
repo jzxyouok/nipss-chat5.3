@@ -30,16 +30,18 @@
                     
                     <div class="chat-history">
                         <ul>
+                        @foreach ($messages as $message)
                             <li class="clearfix">
                                 <div class="message-data align-right">
                                     <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-                                    <span class="message-data-name" >Olia</span> 
+                                    <span class="message-data-name" >{{ Auth::user()->name }}</span> 
                                     <i class="fa fa-circle me"></i>
                                 </div>
                                 <div class="message other-message float-right">
-                                    {{ Auth::user()->body }}
+                                    {{$message->body}}
                                 </div>
                             </li>
+                        @endforeach
                             <li>
                                 <div class="message-data">
                                     <span class="message-data-name">
@@ -52,7 +54,7 @@
                                 </div>
                             </li>
                             
-                            
+                         
                         </ul>
                     </div> <!-- end chat-history -->
                     <div class="chat-message clearfix">

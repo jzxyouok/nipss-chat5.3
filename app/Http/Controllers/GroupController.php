@@ -8,6 +8,9 @@ use App\Repositories\Participant\ParticipantContract;
 use App\Repositories\Message\MessageContract;
 use App\Http\Requests;
 
+use App\Message;
+use App\Group;
+use App\Participant;
 use Auth;
 
 class GroupController extends Controller
@@ -24,13 +27,13 @@ class GroupController extends Controller
         
     }
     // Show an Group with its messages
-    public function index($group_id){
+    public function index($groupid){
     	// if(!Auth::check()){
     	// 	return redirect()->route('login');
     	// }
-    	$participants = $this->participantRepo->findAll();
-    	// $participants = $this->participantRepo->searchGroupId($group_id);
-    	$messages = $this->messageRepo->id;
+    	// $participants = $this->participantRepo->findAll();
+    	$participants = $this->participantRepo->searchByGroupId($groupid);
+    	$messages = $this->messageRepo->searchByGroupId($groupid);
 
     	return view('groups.index', ['participants' => $participants, 'messages' => $messages]);
     }
