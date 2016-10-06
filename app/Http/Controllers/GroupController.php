@@ -27,11 +27,12 @@ class GroupController extends Controller
         
     }
     // Show an Group with its messages
-    public function index($group_id){
+    public function index(){
     	// if(!Auth::check()){
     	// 	return redirect()->route('login');
     	// }
-    	$participants = $this->participantRepo->searchGroupId($group_id);
+    	$participants = $this->participantRepo->findAll();
+    	// $participants = $this->participantRepo->searchGroupId($group_id);
     	$messages = $this->messageRepo->id;
 
     	return view('groups.index', ['participants' => $participants, 'messages' => $messages]);

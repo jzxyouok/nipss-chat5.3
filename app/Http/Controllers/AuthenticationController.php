@@ -24,7 +24,7 @@ class AuthenticationController extends Controller
             $user = Auth::user();
             switch ($user->group_name) {
                 case 'group1':
-                    return Redirect::route('get_rooms', ['group_id' => 1]);
+                    return Redirect::route('get_rooms');
                     break;
                 case 'group2':
                     return Redirect::route('get_rooms', ['group_id' => 2]);

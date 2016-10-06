@@ -22,7 +22,7 @@ Route::group(['middleware' => 'web'], function() {
 	Route::post('/logout', 'AuthenticationController@logout');
 
 	Route::group(['prefix' => 'chat_room'], function() {
-	    Route::get('/{group_id}', 'GroupController@index')->name('get_rooms');
+	    Route::get('/', 'GroupController@index')->name('get_rooms');
 	    // Route::get('/try', 'GroupController@fuckyou')->name('try');
 
 	    Route::post('/sendMessage', 'MessageController@postMessage')->name('massenger');
