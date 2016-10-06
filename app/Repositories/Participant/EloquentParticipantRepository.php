@@ -8,13 +8,6 @@ use App\Repositories\Group\GroupContract;
 
 class EloquentParticipantRepository implements ParticipantContract
 {
-    protected $repo;
-
-    public function __construct(GroupContract $groupContract)
-    {
-        $this->repo = $groupContract;
-    }
-    
     // public function remove($userid) {
     //     $user = $this->findById($userid);
     //     return $user->delete();
@@ -29,8 +22,8 @@ class EloquentParticipantRepository implements ParticipantContract
         return Participant::all();
     }
   
-    // public function searchByGroupId($group_id) {
-    //     $participants = Participant::where('group_id', $group_id)->get();
-    //     return $participants;
-    // }
+    public function searchByGroupId($group_id) {
+        $participants = Participant::where('group_id', $group_id)->get();
+        return $participants;
+    }
 }

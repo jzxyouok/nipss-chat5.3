@@ -8,9 +8,6 @@ use App\Repositories\Participant\ParticipantContract;
 use App\Repositories\Message\MessageContract;
 use App\Http\Requests;
 
-use App\Participant;
-use App\Group;
-use App\Message;
 use Auth;
 
 class GroupController extends Controller
@@ -20,14 +17,14 @@ class GroupController extends Controller
     protected $participantRepo;
     protected $messageRepo;
     
-    public function __construct(GroupContract $groupContract, ParticipantContract $participantContract, Message $messageContract){
+    public function __construct(GroupContract $groupContract, ParticipantContract $participantContract, MessageContract $messageContract){
        $this->repo = $groupContract;
        $this->participantRepo = $participantContract;
        $this->messageRepo = $messageContract;
         
     }
     // Show an Group with its messages
-    public function index(){
+    public function index($group_id){
     	// if(!Auth::check()){
     	// 	return redirect()->route('login');
     	// }
