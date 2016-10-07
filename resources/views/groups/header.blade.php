@@ -96,8 +96,8 @@
 						<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
 							<img src="{{ asset('assets/img/avatar52dba.jpg') }}" alt="" />
 							<span class="profile-info">
-								dgdgdf
-								<small>dfgdfgdf</small>
+								{{ Auth::user()->username }}
+								<small>{{ Auth::user()->name }}</small>
 							</span>
 						</a>
 						<ul class="dropdown-menu animation-dock">
