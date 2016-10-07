@@ -30,18 +30,18 @@
                     
                     <div class="chat-history">
                         <ul>
-                        @foreach ($messages as $message)
-                            <li class="clearfix">
-                                <div class="message-data align-right">
-                                    <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-                                    <span class="message-data-name" >{{ Auth::user()->name }}</span> 
-                                    <i class="fa fa-circle me"></i>
-                                </div>
-                                <div class="message other-message float-right">
-                                    {{$message->body}}
-                                </div>
-                            </li>
-                        @endforeach
+                            @foreach ($messages as $message)
+                                <li class="clearfix">
+                                    <div class="message-data align-right">
+                                        <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
+                                        <span class="message-data-name" >{{ Autsh::user()->name }}</span> 
+                                        <i class="fa fa-circle me"></i>
+                                    </div>
+                                    <div class="message other-message float-right">
+                                        {{$message->body}}
+                                    </div>
+                                </li>
+                            @endforeach
                             <li>
                                 <div class="message-data">
                                     <span class="message-data-name">
@@ -59,13 +59,15 @@
                     </div> <!-- end chat-history -->
                     <div class="chat-message clearfix">
                     <form name="form1" action="{{ route('massenger') }}" method="post">
+                        
+                        {{ csrf_field() }}
+
                         <textarea name="message" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
                         <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
                         <i class="fa fa-file-image-o"></i>
                         
-                        <button>Send</button>
-                      
-                      {{ csrf_field() }}
+                        <button>Send</button>                     
+                        
                     </form>
                     </div> <!-- end chat-message -->
                 </div> <!-- end chat -->
