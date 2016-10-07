@@ -27,16 +27,49 @@ class GroupController extends Controller
         
     }
     // Show an Group with its messages
-    public function index($groupid){
+    // public function index($id){
     	// if(!Auth::check()){
     	// 	return redirect()->route('login');
     	// }
     	// $participants = $this->participantRepo->findAll();
-    	$participants = $this->participantRepo->searchByGroupId($groupid);
-    	$messages = $this->messageRepo->searchByGroupId($groupid);
+    	// $participants = $this->participantRepo->searchByGroupId($id);
+    	// $messages = $this->messageRepo->searchByGroupId($id);
 
-    	return view('groups.index', ['participants' => $participants, 'messages' => $messages]);
+    	// return view('groups.index', ['participants' => $participants, 'messages' => $messages]);
+    // }
+
+
+
+    public function getRoom($group_id){
+        if(!Auth::check()){
+         return redirect()->route('login');
+        }
+        $participants = $this->participantRepo->findAll();
+        $participants = $this->participantRepo->searchByGroupId($group_id);
+        $messages = $this->messageRepo->searchByGroupId($group_id);
+
+        return view('groups.getroom', ['participants' => $participants, 'messages' => $messages]);
     }
+
+    public function groupIndex(){
+        $groups = $this->repo->findAll();
+        $participants = $this->participantRepo->findAll();
+        return view('groups.allgroups', ['participants' => $participants, 'groups' => $groups]);
+    }
+
+    // Show an Group with its messages
+    public function index($groupid){
+        // if(!Auth::check()){
+        //  return redirect()->route('login');
+        // }
+        // $participants = $this->participantRepo->findAll();
+        $participants = $this->participantRepo->searchByGroupId($groupid);
+        $messages = $this->messageRepo->searchByGroupId($groupid);
+
+        return view('groups.index', ['participants' => $participants, 'messages' => $messages]);
+    }
+
+    
 
 
 

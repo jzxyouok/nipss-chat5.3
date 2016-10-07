@@ -1,4 +1,4 @@
-@extends('groups.master')
+@extends('participants.master')
 
 @section('content')
 
@@ -8,7 +8,7 @@
 		   
 			<ol class="breadcrumb">
 				<li><a href="#">Chatroom</a></li>
-				<li class="active"><a href="#">{{ Auth::user()->group_name }}</a></li>
+				<li class="active"><a href="#">room</a></li>
 			</ol>
 		</div>
 		<!--end .section-header -->
@@ -22,26 +22,26 @@
                         </div>
                         <div class="col-md-9"></div>
                         <div class="chat-about">
-                            <div class="chat-with">Chat with:  {{ Auth::user()->username }} </div>
-                            <div class="chat-num-messages"> {{ Auth::user()->group_name }} </div>
+                            <div class="chat-with">Chat with:  email </div>
+                            <div class="chat-num-messages"> groupname </div>
                         </div>
                         <i class="fa fa-star"></i>
                     </div> <!-- end chat-header -->
                     
                     <div class="chat-history">
                         <ul>
-                            @foreach ($messages as $message)
+                            
                                 <li class="clearfix">
                                     <div class="message-data align-right">
                                         <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-                                        <span class="message-data-name" >{{ Auth::user()->name }}</span> 
+                                        <span class="message-data-name" >name</span> 
                                         <i class="fa fa-circle me"></i>
                                     </div>
                                     <div class="message other-message float-right">
-                                        {{$message->body}}
+                                        body
                                     </div>
                                 </li>
-                            @endforeach
+                            
                             <li>
                                 <div class="message-data">
                                     <span class="message-data-name">

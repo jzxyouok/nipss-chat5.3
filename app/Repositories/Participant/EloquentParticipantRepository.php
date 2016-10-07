@@ -26,4 +26,9 @@ class EloquentParticipantRepository implements ParticipantContract
         $participant = Participant::where('group_id', $group_id)->get();
         return $participant;
     }
+
+    // public function searchByGroupId($group_id) {
+    //     $participant = Participant::where('group_id', $group_id)->get();
+    //     return $participant;
+    // }
 }

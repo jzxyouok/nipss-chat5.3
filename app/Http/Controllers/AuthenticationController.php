@@ -22,20 +22,21 @@ class AuthenticationController extends Controller
 
         if (Auth::attempt(['username' => $username, 'password' => $password])) {
             $user = Auth::user();
-            switch ($user->group_name) {
-                case 'group1':
-                    return Redirect::route('get_rooms', ['group_id' => 1]);
-                    break;
-                case 'group2':
-                    return Redirect::route('get_rooms', ['group_id' => 2]);
-                    break;
-                case 'group3':
-                    return Redirect::route('get_rooms', ['group_id' => 3]);
-                    break;
-                case 'group4':
-                    return Redirect::route('get_rooms', ['group_id' => 4]);
-                    break;
-            }
+            // switch ($user->group_name) {
+                // case 'group1':
+                    // return Redirect::route('get_rooms', ['group_id' => 1]);
+                    // break;
+                // case 'group2':
+                    // return Redirect::route('get_rooms', ['group_id' => 2]);
+                    // break;
+                // case 'group3':
+                    // return Redirect::route('get_rooms', ['group_id' => 3]);
+                    // break;
+                // case 'group4':
+                    // return Redirect::route('get_rooms', ['group_id' => 4]);
+            return Redirect::route('home');
+                    // break;
+            // }
         }else {
         	return redirect()->route('login');
         }

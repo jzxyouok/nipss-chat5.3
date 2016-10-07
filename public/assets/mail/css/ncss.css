@@ -1,0 +1,35 @@
+body {
+        background-image: url(../img/bg2.jpg)!important;
+        background-repeat: repeat-x!important;
+}
+#form {
+        margin-top: 10%
+}
+#full {
+        margin-top: 10%
+}
+
+#a button:hover {
+        background-color:#154500;
+        color: white
+}
+
+.glyphicon {
+        color: #154500
+}
+@media only screen and (max-width: 1024px) {
+        p#pre {
+                display: none
+        }
+        #full {
+                margin-top: 0px;
+                width: 100%
+        }
+        #form {
+                margin-top: 0px;
+                width: 100%
+        }
+        .glyphicon {
+                color: #154500
+        }
+}

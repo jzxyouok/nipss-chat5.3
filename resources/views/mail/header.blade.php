@@ -7,7 +7,7 @@
 				<ul class="header-nav header-nav-options">
 					<li class="header-nav-brand">
 						<div class="brand-holder">
-							<a href="{{ route('home') }}">
+							<a href="/home">
 								<div id="a1">
 									<span class="text-lg text-bold text-primary"><img src="{{ asset('assets/img/nipss.png') }}"><h5 style="color:darkgreen; display:inline; width:10%;"><p style="color:darkgreen; display:inline;"><b>NIPSS, KURU</b></p></h5></span>
 								</div>
@@ -27,15 +27,6 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="headerbar-right">
 				<ul class="header-nav header-nav-options">
-					<li>
-						<!-- Search form -->
-						<form class="navbar-search" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" name="headerSearch" placeholder="Enter your keyword">
-							</div>
-							<button type="submit" class="btn btn-icon-toggle ink-reaction"><i class="fa fa-search"></i></button>
-						</form>
-					</li>
 					<li class="dropdown hidden-xs">
 						<button href="javascript:void(0);" class="btn btn-icon-toggle btn-default" data-toggle="dropdown" style="margin-right:10px;">
 							Groups
@@ -96,8 +87,8 @@
 						<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
 							<img src="{{ asset('assets/img/avatar52dba.jpg') }}" alt="" />
 							<span class="profile-info">
-								{{ Auth::user()->username }}
-								<small>{{ Auth::user()->name }}</small>
+								email
+								<small>name</small>
 							</span>
 						</a>
 						<ul class="dropdown-menu animation-dock">

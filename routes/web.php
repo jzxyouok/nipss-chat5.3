@@ -21,12 +21,33 @@ Route::group(['middleware' => 'web'], function() {
 	Route::post('login', 'AuthenticationController@doLogin')->name('getFuckingIn');
 	Route::post('/logout', 'AuthenticationController@logout');
 
-	Route::group(['prefix' => 'chat_room'], function() {
-	    Route::get('/{group_id}', 'GroupController@index')->name('get_rooms');
-	    // Route::get('/try', 'GroupController@fuckyou')->name('try');
+	Route::group(['prefix' => 'welcome'], function(){
+		Route::get('/', 'HomeController@index')->name('home');
 
-	    Route::post('/sendMessage', 'MessageController@postMessage')->name('massenger');	    
+	});
+
+	Route::group(['prefix' => 'chat_room'], function() {
+		Route::get('/', 'GroupController@index')->name('group');
+		Route::get('/', 'GroupController@getRoom')->name('get_rooms');
+	    // Route::get('/{id}', 'GroupController@index')->name('room');
+
+	    Route::post('/sendMessage', 'MessageController@postMessage')->name('massenger');
 	    
 	});
+
+
+	Route::group(['prefix' => 'all-members'], function() {
+		Route::get('/', 'HomeController@members')->name('members');
+	});
+
+	Route::group(['prefix' => 'mail'], function() {
+		Route::get('/', 'HomeController@mail')->name('mail');
+		Route::get('/create-mail', 'MailController@createMail')->name('create-mail');
+	});
+
+	Route::group(['prefix' => 'groups'], function() {
+		Route::get('/', 'GroupController@groupIndex')->name('groups');
+	});
+
 
 });

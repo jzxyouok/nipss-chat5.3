@@ -22,8 +22,7 @@ class EloquentMessageRepository implements MessageContract
     private function setMessageProperties($message, $request) {
         $message->participant_id = '1';
         $message->group_id = '1';
-        $message->body = $request->message;
-       
+        $message->body = $request->message;       
     }
     
     public function findAll() {

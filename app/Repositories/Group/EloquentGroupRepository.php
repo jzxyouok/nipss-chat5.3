@@ -16,7 +16,7 @@ class EloquentGroupRepository implements GroupContract
     }
     
     public function findById($groupid) {
-        // return
+        
     }
 
 
