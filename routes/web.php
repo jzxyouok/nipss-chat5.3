@@ -25,9 +25,7 @@ Route::group(['middleware' => 'web'], function() {
 	    Route::get('/{group_id}', 'GroupController@index')->name('get_rooms');
 	    // Route::get('/try', 'GroupController@fuckyou')->name('try');
 
-	    Route::post('/sendMessage', 'MessageController@postMessage')->name('massenger');
-
-	    
+	    Route::post('/sendMessage', 'MessageController@postMessage')->name('massenger');	    
 	    
 	});
 
