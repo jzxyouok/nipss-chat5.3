@@ -26,6 +26,20 @@ class GroupController extends Controller
        $this->messageRepo = $messageContract;
         
     }
+
+    // Show an Group with its messages
+    public function index($groupid){
+        // if(!Auth::check()){
+        //  return redirect()->route('login');
+        // }
+        // $participants = $this->participantRepo->findAll();
+        $participants = $this->participantRepo->searchByGroupId($groupid);
+        $messages = $this->messageRepo->searchByGroupId($groupid);
+
+        return view('groups.index', ['participants' => $participants, 'messages' => $messages]);
+    }
+
+    
     // Show an Group with its messages
     // public function index($id){
     	// if(!Auth::check()){
@@ -57,17 +71,7 @@ class GroupController extends Controller
         return view('groups.allgroups', ['participants' => $participants, 'groups' => $groups]);
     }
 
-    // Show an Group with its messages
-    public function index($groupid){
-        // if(!Auth::check()){
-        //  return redirect()->route('login');
-        // }
-        // $participants = $this->participantRepo->findAll();
-        $participants = $this->participantRepo->searchByGroupId($groupid);
-        $messages = $this->messageRepo->searchByGroupId($groupid);
-
-        return view('groups.index', ['participants' => $participants, 'messages' => $messages]);
-    }
+    
 
     
 

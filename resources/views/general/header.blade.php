@@ -44,8 +44,7 @@
 							<li class="dropdown-header">Select a Group</li>
 							@foreach($groups as $group)
 								<li>
-									<a class="alert alert-callout alert-info" href="/chat-room/{{$group->id}}">
-										<!--<img class="pull-right img-circle dropdown-avatar" src="{{ asset('assets/img/avatar52dba.jpg') }}" alt="" />-->
+									<a class="alert alert-callout alert-info" href="{{ route('group')/$group->id}}">
 										<strong>{{ $group->group_name }}</strong>
 										<br/>
 										<!--<small>Testing functionality...</small>-->

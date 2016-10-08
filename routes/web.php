@@ -11,10 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::group(['middleware' => 'web'], function() {
 	
 	Route::get('/', 'AuthenticationController@showLogin')->name('login');
@@ -28,7 +24,7 @@ Route::group(['middleware' => 'web'], function() {
 
 	Route::group(['prefix' => 'chat_room'], function() {
 		Route::get('/', 'GroupController@index')->name('group');
-		Route::get('/', 'GroupController@getRoom')->name('get_rooms');
+		Route::get('/{id}', 'GroupController@getRoom')->name('get_rooms');
 	    // Route::get('/{id}', 'GroupController@index')->name('room');
 
 	    Route::post('/sendMessage', 'MessageController@postMessage')->name('massenger');

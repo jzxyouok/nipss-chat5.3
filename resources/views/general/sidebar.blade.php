@@ -41,7 +41,7 @@
 							</li>
 							<hr />
 							<li class="tile">
-								<a class="tile-content ink-reaction" href="{{ route('get_rooms') }}" >
+								<a class="tile-content ink-reaction" href="#" >
 									<div class="tile-text">
 										Chat
 									</div>
