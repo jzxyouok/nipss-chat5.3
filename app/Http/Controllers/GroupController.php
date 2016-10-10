@@ -40,6 +40,7 @@ class GroupController extends Controller
     }
 
     
+<<<<<<< HEAD
    
     public function getRoom($id){
         if(!Auth::check()){
@@ -51,6 +52,31 @@ class GroupController extends Controller
         $messages = $this->messageRepo->searchByGroupId($id);
 
         return view('groups.getroom', ['participants' => $participants, 'messages' => $messages, 'groups' => $groups]);
+=======
+    // Show an Group with its messages
+    // public function index($id){
+    	// if(!Auth::check()){
+    	// 	return redirect()->route('login');
+    	// }
+    	// $participants = $this->participantRepo->findAll();
+    	// $participants = $this->participantRepo->searchByGroupId($id);
+    	// $messages = $this->messageRepo->searchByGroupId($id);
+
+    	// return view('groups.index', ['participants' => $participants, 'messages' => $messages]);
+    // }
+
+
+
+    public function getRoom($group_id){
+        if(!Auth::check()){
+         return redirect()->route('login');
+        }
+        $participants = $this->participantRepo->findAll();
+        $participants = $this->participantRepo->searchByGroupId($group_id);
+        $messages = $this->messageRepo->searchByGroupId($group_id);
+
+        return view('groups.getroom', ['participants' => $participants, 'messages' => $messages]);
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
     }
 
     public function groupIndex(){
@@ -60,6 +86,7 @@ class GroupController extends Controller
     }
 
     
+<<<<<<< HEAD
  // Show an Group with its messages
     // public function index($id){
     	// if(!Auth::check()){
@@ -73,6 +100,8 @@ class GroupController extends Controller
     // }
 
 
+=======
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 
     
 

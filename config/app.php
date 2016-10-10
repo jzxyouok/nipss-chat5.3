@@ -162,7 +162,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+<<<<<<< HEAD
         Collective\Html\HtmlServiceProvider::class,
+=======
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 
         /*
          * Package Service Providers...
@@ -179,6 +182,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+<<<<<<< HEAD
+=======
+        // laravel collective
+        Collective\Html\HtmlServiceProvider::class,
+
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
         // native service providers
         App\Providers\GroupServiceProvider::class,
         App\Providers\ParticipantServiceProvider::class,
@@ -232,6 +241,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
+=======
+
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 

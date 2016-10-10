@@ -7,7 +7,11 @@
 				<ul class="header-nav header-nav-options">
 					<li class="header-nav-brand">
 						<div class="brand-holder">
+<<<<<<< HEAD
 							<a href="{{ route('home') }}">
+=======
+							<a href="/home">
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 								<div id="a1">
 									<span class="text-lg text-bold text-primary"><img src="{{ asset('assets/img/nipss.png') }}"><h5 style="color:darkgreen; display:inline; width:10%;"><p style="color:darkgreen; display:inline;"><b>NIPSS, KURU</b></p></h5></span>
 								</div>
@@ -27,6 +31,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="headerbar-right">
 				<ul class="header-nav header-nav-options">
+<<<<<<< HEAD
 					<li>
 						<!-- Search form -->
 						<form class="navbar-search" role="search">
@@ -36,12 +41,15 @@
 							<button type="submit" class="btn btn-icon-toggle ink-reaction"><i class="fa fa-search"></i></button>
 						</form>
 					</li>
+=======
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 					<li class="dropdown hidden-xs">
 						<button href="javascript:void(0);" class="btn btn-icon-toggle btn-default" data-toggle="dropdown" style="margin-right:10px;">
 							Groups
 						</button>
 						<ul class="dropdown-menu animation-expand">
 							<li class="dropdown-header">Select a Group</li>
+<<<<<<< HEAD
 							@foreach($groups as $group)
 								<li>
 									<a class="alert alert-callout alert-info" href="{{route('selectedgroup',['id' => $group->id])}}">
@@ -51,6 +59,52 @@
 									</a>
 								</li>
 							@endforeach
+=======
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/1">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="{{ asset('assets/img/avatar52dba.jpg') }}" alt="" />-->
+									<strong>Chat Group One</strong>
+									<br/>
+									<!--<small>Testing functionality...</small>-->
+								</a>
+							</li>
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/2">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="../../assets/img/avatar3.jpg?1404026799" alt="" />-->
+									<strong>Chat Group Two</strong>
+									<br/>
+									<!--<small>Reviewing last changes...</small>-->
+								</a>
+							</li>
+							
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/3">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="../../assets/img/avatar3.jpg?1404026799" alt="" />-->
+									<strong>Chat Group Three</strong>
+									<br/>
+									<!--<small>Reviewing last changes...</small>-->
+								</a>
+							</li>
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/4">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="../../assets/img/avatar3.jpg?1404026799" alt="" />-->
+									<strong> Chat Group Four</strong>
+									<br/>
+									<!--<small>Reviewing last changes...</small>-->
+								</a>
+							</li>
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/5">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="../../assets/img/avatar3.jpg?1404026799" alt="" />-->
+									<strong> Chat Group Five </strong>
+									<br/>
+									<!--<small>Reviewing last changes...</small>-->
+								</a>
+							</li>
+							<li class="dropdown-header">Options</li>
+							<li><a href="#">View all Chat Groups <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>
+							<!--<li><a href="../../html/pages/login.html">Mark as read <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>-->
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 						</ul>
 						<!--end .dropdown-menu -->
 					</li>
@@ -59,10 +113,17 @@
 				<ul class="header-nav header-nav-profile">
 					<li class="dropdown">
 						<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
+<<<<<<< HEAD
 						
 							<span class="profile-info">
 								{{ Auth::user()->username }}
 								<small>{{ Auth::user()->name }}</small>
+=======
+							<img src="{{ asset('assets/img/avatar52dba.jpg') }}" alt="" />
+							<span class="profile-info">
+								email
+								<small>name</small>
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 							</span>
 						</a>
 						<ul class="dropdown-menu animation-dock">

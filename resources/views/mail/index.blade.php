@@ -18,7 +18,11 @@
                 <div style="width:100%" class="chat">
                     <div class="chat-header clearfix">
                         <div class="col-md-2">
+<<<<<<< HEAD
                             
+=======
+                            <img class="img-circle img-responsive" src="assets/img/avatar52dba.jpg" alt="avatar" />
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
                         </div>
                         <div class="col-md-9"></div>
                         <div class="chat-about">
@@ -50,16 +54,28 @@
                                     var checkboxes = document.getElementsByName('approve[]');
                                     var button = document.getElementById('toggle');
 
+<<<<<<< HEAD
                                     if(button.value == 'Select All'){
                                         for (var i in checkboxes){
                                             checkboxes[i].checked = 'FALSE';
                                         }
                                         button.value = 'Deselect'
+=======
+                                    if(button.value == 'select'){
+                                        for (var i in checkboxes){
+                                            checkboxes[i].checked = 'FALSE';
+                                        }
+                                        button.value = 'deselect'
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
                                     }else{
                                         for (var i in checkboxes){
                                             checkboxes[i].checked = '';
                                         }
+<<<<<<< HEAD
                                         button.value = 'Select All';
+=======
+                                        button.value = 'select';
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
                                     }
                                 }
 

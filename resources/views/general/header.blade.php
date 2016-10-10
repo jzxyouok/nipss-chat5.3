@@ -44,7 +44,11 @@
 							<li class="dropdown-header">Select a Group</li>
 							@foreach($groups as $group)
 								<li>
+<<<<<<< HEAD
 									<a class="alert alert-callout alert-info" href="{{route('selectedgroup',['id' => $group->id])}}">
+=======
+									<a class="alert alert-callout alert-info" href="{{ route('group')/$group->id}}">
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 										<strong>{{ $group->group_name }}</strong>
 										<br/>
 										<!--<small>Testing functionality...</small>-->
@@ -59,6 +63,10 @@
 				<ul class="header-nav header-nav-profile">
 					<li class="dropdown">
 						<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
+<<<<<<< HEAD
+=======
+							<img src="{{ asset('assets/img/avatar52dba.jpg') }}" alt="" />
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 							<span class="profile-info">
 								{{ Auth::user()->username }}
 								<small>{{ Auth::user()->name }}</small>

@@ -13,6 +13,10 @@ class EloquentMessageRepository implements MessageContract
     }
     
     public function create($request) {
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
         $message = $this->messageModel;
         $this->setMessageProperties($message, $request);
         // $message->user()->associate(Auth::user());

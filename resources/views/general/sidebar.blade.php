@@ -41,7 +41,11 @@
 							</li>
 							<hr />
 							<li class="tile">
+<<<<<<< HEAD
 								<a class="tile-content ink-reaction" href="{{ route('generalChat') }}" >
+=======
+								<a class="tile-content ink-reaction" href="#" >
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 									<div class="tile-text">
 										Chat
 									</div>

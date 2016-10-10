@@ -22,7 +22,11 @@ Route::group(['middleware' => 'web'], function() {
 
 	});
 
+<<<<<<< HEAD
 	Route::group(['prefix' => 'chat-room'], function() {
+=======
+	Route::group(['prefix' => 'chat_room'], function() {
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 		Route::get('/', 'GroupController@index')->name('group');
 		Route::get('/{id}', 'GroupController@getRoom')->name('get_rooms');
 	    // Route::get('/{id}', 'GroupController@index')->name('room');
@@ -32,6 +36,7 @@ Route::group(['middleware' => 'web'], function() {
 	});
 
 
+<<<<<<< HEAD
 	Route::group(['prefix' => 'general-chat'], function() {
 		Route::get('/', 'HomeController@generalChat')->name('generalChat');
 	});
@@ -43,12 +48,28 @@ Route::group(['middleware' => 'web'], function() {
 		Route::get('/', 'HomeController@mail')->name('mail');
 		Route::get('/create-mail', 'MailController@createMail')->name('create-mail');
 		Route::post('/', 'MailController@postMail')->name('sendmail');
+=======
+	Route::group(['prefix' => 'all-members'], function() {
+		Route::get('/', 'HomeController@members')->name('members');
+	});
+
+	Route::group(['prefix' => 'mail'], function() {
+		Route::get('/', 'HomeController@mail')->name('mail');
+		// Route::get('/create-mail', 'MailController@createMail')->name('create-mail');
+		Route::post('/send-mail', 'MailController@postMail')->name('sendmail');
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 	});
 
 	Route::group(['prefix' => 'groups'], function() {
 		Route::get('/', 'GroupController@groupIndex')->name('groups');
+<<<<<<< HEAD
 		
 	});
 
     	Route::get('/group/{id}', 'GroupController@getRoom')->name('selectedgroup');
+=======
+	});
+
+
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 });

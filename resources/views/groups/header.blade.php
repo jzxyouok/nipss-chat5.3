@@ -42,6 +42,7 @@
 						</button>
 						<ul class="dropdown-menu animation-expand">
 							<li class="dropdown-header">Select a Group</li>
+<<<<<<< HEAD
 							@foreach($groups as $group)
 								<li>
 									<a class="alert alert-callout alert-info" href="{{route('selectedgroup',['id' => $group->id])}}">
@@ -51,6 +52,52 @@
 									</a>
 								</li>
 							@endforeach
+=======
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/1">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="{{ asset('assets/img/avatar52dba.jpg') }}" alt="" />-->
+									<strong>Chat Group One</strong>
+									<br/>
+									<!--<small>Testing functionality...</small>-->
+								</a>
+							</li>
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/2">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="../../assets/img/avatar3.jpg?1404026799" alt="" />-->
+									<strong>Chat Group Two</strong>
+									<br/>
+									<!--<small>Reviewing last changes...</small>-->
+								</a>
+							</li>
+							
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/3">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="../../assets/img/avatar3.jpg?1404026799" alt="" />-->
+									<strong>Chat Group Three</strong>
+									<br/>
+									<!--<small>Reviewing last changes...</small>-->
+								</a>
+							</li>
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/4">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="../../assets/img/avatar3.jpg?1404026799" alt="" />-->
+									<strong> Chat Group Four</strong>
+									<br/>
+									<!--<small>Reviewing last changes...</small>-->
+								</a>
+							</li>
+							<li>
+								<a class="alert alert-callout alert-info" href="/group/5">
+									<!--<img class="pull-right img-circle dropdown-avatar" src="../../assets/img/avatar3.jpg?1404026799" alt="" />-->
+									<strong> Chat Group Five </strong>
+									<br/>
+									<!--<small>Reviewing last changes...</small>-->
+								</a>
+							</li>
+							<li class="dropdown-header">Options</li>
+							<li><a href="#">View all Chat Groups <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>
+							<!--<li><a href="../../html/pages/login.html">Mark as read <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>-->
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 						</ul>
 						<!--end .dropdown-menu -->
 					</li>
@@ -59,7 +106,11 @@
 				<ul class="header-nav header-nav-profile">
 					<li class="dropdown">
 						<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
+<<<<<<< HEAD
 							
+=======
+							<img src="{{ asset('assets/img/avatar52dba.jpg') }}" alt="" />
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 							<span class="profile-info">
 								{{ Auth::user()->username }}
 								<small>{{ Auth::user()->name }}</small>

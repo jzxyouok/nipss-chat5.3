@@ -35,7 +35,11 @@
 								<li class="tile">
 									<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
 										<div class="tile-icon">
+<<<<<<< HEAD
 										
+=======
+											<img src="assets/img/avatar52dba.jpg" alt="" />
+>>>>>>> 26797666d5230ed16e610fe330d2e487ed423617
 										</div>
 										<div class="tile-text">
 											{{ $participant->name }}
