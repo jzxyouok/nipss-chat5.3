@@ -14,5 +14,8 @@ class Group extends Model
     	return $this->hasMany('App\Message');
     }
 
-
+    public function mails() {
+    	return $this->hasMany('App\Mail');
+    }
+    
 }

@@ -13,4 +13,8 @@ class Participant extends Model
     public function messages(){
     	return $this->hasMany('App\Message');
     }
+
+    public function mails() {
+    	return $this->hasMany('App\Mail');
+    }
 }

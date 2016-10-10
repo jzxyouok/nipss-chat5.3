@@ -38,7 +38,8 @@ Route::group(['middleware' => 'web'], function() {
 
 	Route::group(['prefix' => 'mail'], function() {
 		Route::get('/', 'HomeController@mail')->name('mail');
-		Route::get('/create-mail', 'MailController@createMail')->name('create-mail');
+		// Route::get('/create-mail', 'MailController@createMail')->name('create-mail');
+		Route::post('/send-mail', 'MailController@postMail')->name('sendmail');
 	});
 
 	Route::group(['prefix' => 'groups'], function() {
